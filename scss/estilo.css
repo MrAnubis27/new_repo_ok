@@ -89,13 +89,9 @@ nav ul li a:hover {
 }
 
 .parrafo {
-  font-size: 30px;
+  font-size: 20px;
   color: black;
   text-align: center;
-}
-
-h1 {
-  font-size: 30px;
 }
 
 #gridImagenes {
@@ -103,14 +99,13 @@ h1 {
   display: grid;
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
-  max-width: 870px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 3em;
   margin-bottom: 5em;
-  row-gap: 50px;
-  -webkit-column-gap: 50px;
-          column-gap: 50px;
+  row-gap: 30px;
+  justify-items: center;
 }
 
 .gridItem {
@@ -122,6 +117,7 @@ h1 {
   background-color: white;
   color: black;
   max-height: 800px;
+  margin-bottom: 60px;
 }
 
 .gridItem::after {
@@ -227,8 +223,8 @@ textarea {
   padding-bottom: 10px;
   padding-top: 20px;
   background-color: #efe1fa;
-  margin-left: 280px;
-  margin-right: 280px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .itemPasos {
@@ -489,36 +485,45 @@ footer {
   background-color: #7a7a7a;
 }
 
+@media screen and (min-width: 360px) {
+  #gridImagenes {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    margin-left: 10px;
+  }
+  .gridItem {
+    max-width: 300px;
+  }
+  header h1 {
+    font-size: 2.5rem;
+  }
+  .boxFooter {
+    padding: 0;
+  }
+}
+
 @media screen and (min-width: 590px) {
-  #gridImagenes {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-@media screen and (min-width: 960px) {
-  #gridImagenes {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-@media screen and (min-width: 960px) {
   #gridImagenes {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (max-width: 1042px) {
+@media screen and (min-width: 970px) {
   #gridImagenes {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-    max-width: 400px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 1042px) {
+@media screen and (min-width: 1042px) {
+  #gridImagenes {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 970px) {
   nav {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
